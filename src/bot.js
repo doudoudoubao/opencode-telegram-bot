@@ -752,7 +752,7 @@ async function handleShareSession(chatId, userId, sessionId) {
 ${shareUrl}
 
 📋 *会话信息:*
-• 名称: ${session.title}
+• 名称: ${escapeMarkdown(session.title)}
 • ID: ${session.id.substring(0, 12)}...
 
 ⚠️ *注意:* 分享的会话将公开可见`;
