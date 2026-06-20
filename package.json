@@ -1,0 +1,20 @@
+{
+  "name": "opencode-telegram-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "node --watch src/bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["telegram", "bot", "opencode", "ai"],
+  "author": "",
+  "license": "ISC",
+  "description": "OpenCode Telegram Bot - 通过 Telegram 与 OpenCode AI 对话",
+  "dependencies": {
+    "@opencode-ai/sdk": "^1.17.7",
+    "dotenv": "^17.4.2",
+    "node-telegram-bot-api": "^1.1.0"
+  }
+}
