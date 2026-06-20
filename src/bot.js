@@ -52,6 +52,11 @@ function checkAccess(userId) {
   return ALLOWED_USER_IDS.includes(userId);
 }
 
+function escapeMarkdown(text) {
+  if (!text) return '';
+  return text.replace(/[_*\[\]()~`>#+\-=|{}.!]/g, '\\$&');
+}
+
 function formatSession(session) {
   const title = session.title || '未命名会话';
   const id = session.id ? session.id.substring(0, 8) : 'unknown';
