@@ -387,7 +387,7 @@ async function handleCurrentSession(msg) {
       const message = `📌 *当前会话详情*
 
 📋 *基本信息:*
-• 名称: ${session.title || '未命名'}
+• 名称: ${escapeMarkdown(session.title || '未命名')}
 • ID: ${session.id}
 • 模型: ${model}
 
