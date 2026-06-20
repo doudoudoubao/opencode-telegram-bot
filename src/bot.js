@@ -420,7 +420,7 @@ async function handleSwitchSession(chatId, userId, index) {
       const message = `✅ *已切换会话*
 
 📋 *会话信息:*
-• 名称: ${session.title || '未命名'}
+• 名称: ${escapeMarkdown(session.title || '未命名')}
 • ID: ${session.id.substring(0, 12)}...
 • 模型: ${session.model ? `${session.model.providerID}/${session.model.id}` : '未知'}
 
