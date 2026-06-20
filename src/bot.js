@@ -830,7 +830,7 @@ async function handleDeleteConfirm(chatId, userId, index) {
 您确定要删除以下会话吗？
 
 📋 *会话信息:*
-• 名称: ${session.title || '未命名'}
+• 名称: ${escapeMarkdown(session.title || '未命名')}
 • ID: ${session.id.substring(0, 12)}...
 
 ⚠️ *警告:* 此操作不可恢复！`;
