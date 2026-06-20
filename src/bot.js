@@ -262,7 +262,7 @@ async function handleNewSession(msg, match) {
       const message = `✅ *新会话已创建*
 
 📋 *会话信息:*
-• 名称: ${session.title}
+• 名称: ${escapeMarkdown(session.title)}
 • ID: ${session.id.substring(0, 12)}...
 • 模型: ${userCurrentModel.get(userId) || DEFAULT_MODEL}
 
