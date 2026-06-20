@@ -303,8 +303,9 @@ async function handleListSessions(msg) {
         const isCurrent = currentId === session.id;
         const marker = isCurrent ? '➡️' : '•';
         const model = session.model ? `${session.model.providerID}/${session.model.id}` : '未知';
+        const title = escapeMarkdown(session.title || '未命名');
         
-        message += `${marker} *${index + 1}.* ${session.title || '未命名'}\n`;
+        message += `${marker} *${index + 1}.* ${title}\n`;
         message += `   📊 模型: ${model}\n`;
         message += `   🆔 ${session.id.substring(0, 12)}...\n\n`;
         
